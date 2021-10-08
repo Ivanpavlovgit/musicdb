@@ -1,7 +1,7 @@
 package com.example.musicsec.service;
 
 import com.example.musicsec.model.entity.UserEntity;
-import com.example.musicsec.model.repository.UserRepository;
+import com.example.musicsec.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

@@ -45,14 +45,18 @@
                        sec:authorize="!isAuthenticated()"
                        th:href="@{/users/register}">Register</a>
                 </li>
+                <li   sec:authorize="isAuthenticated()" class="nav-item col-md-4">
+                    <form th:action="@{/logout}" method="POST">
+                        <button type="Sumbit" class="btn-dark">
+                            Logout
+                        </button>
+                    </form>
+                </li>
 
-                <li class="nav-item ">
+                <li sec:authorize="isAuthenticated()" class="nav-item ">
                     <a class="nav-link text-white active h5" href="/albums/add">Add Album</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link text-white active h5" href="/articles/all">All articles</a>
-                </li>
-                <li class="nav-item">
+                <li sec:authorize="isAuthenticated()" class="nav-item ">
                     <a class="nav-link text-white active h5" href="/articles/all">All articles</a>
                 </li>
 

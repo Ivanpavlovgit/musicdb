@@ -1,7 +1,8 @@
 package com.example.musicsec.service.impl;
 
 import com.example.musicsec.model.entity.UserEntity;
-import com.example.musicsec.model.repository.UserRepository;
+import com.example.musicsec.model.serviceModels.UserRegisterServiceModel;
+import com.example.musicsec.repository.UserRepository;
 import com.example.musicsec.service.UserRoleService;
 import com.example.musicsec.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -34,5 +35,11 @@ public class UserServiceImpl implements UserService {
                         this.userRoleService.getRole ("ADMIN")));
         this.userRepository.save (user);
         this.userRepository.save (admin);
+    }
+
+    @Override
+    public void registerAndLoginUser (UserRegisterServiceModel userRegisterServiceModel) {
+        //TODO coming soon
+        throw new UnsupportedOperationException ("NOT IMPLEMENTED ! ! !");
     }
 }

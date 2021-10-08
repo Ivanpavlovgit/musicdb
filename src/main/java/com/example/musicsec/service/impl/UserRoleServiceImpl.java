@@ -2,7 +2,7 @@ package com.example.musicsec.service.impl;
 
 import com.example.musicsec.model.entity.UserRoleEntity;
 import com.example.musicsec.model.enums.UserRole;
-import com.example.musicsec.model.repository.UserRoleRepository;
+import com.example.musicsec.repository.UserRoleRepository;
 import com.example.musicsec.service.UserRoleService;
 import org.springframework.stereotype.Service;
 

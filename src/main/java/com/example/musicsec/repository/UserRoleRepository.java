@@ -1,4 +1,4 @@
-package com.example.musicsec.model.repository;
+package com.example.musicsec.repository;
 
 import com.example.musicsec.model.entity.UserRoleEntity;
 import com.example.musicsec.model.enums.UserRole;

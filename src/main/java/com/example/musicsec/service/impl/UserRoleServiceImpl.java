@@ -16,10 +16,11 @@ public class UserRoleServiceImpl implements UserRoleService {
 
     @Override
     public void initRoles () {
+        if(this.userRoleRepository.count ()==0){
         var user=new UserRoleEntity ().setRole (UserRole.USER);
         this.userRoleRepository.save(user);
         var admin=new UserRoleEntity ().setRole (UserRole.ADMIN);
-        this.userRoleRepository.save(admin);
+        this.userRoleRepository.save(admin);}
     }
 
     @Override

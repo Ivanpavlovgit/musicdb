@@ -1,15 +1,8 @@
 package com.example.musicsec.model.entity;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 
 @Entity
 @Table(name="users")
@@ -22,6 +15,16 @@ public class UserEntity extends BaseEntity {
 
   @ManyToMany(fetch = FetchType.EAGER)
   private List<UserRoleEntity> roles = new ArrayList<>();
+private String fullname;
+
+  public String getFullname () {
+    return fullname;
+  }
+
+  public UserEntity setFullname (String fullname) {
+    this.fullname = fullname;
+    return this;
+  }
 
   public String getName() {
     return name;
@@ -47,6 +50,10 @@ public class UserEntity extends BaseEntity {
 
   public UserEntity setRoles(List<UserRoleEntity> roles) {
     this.roles = roles;
+    return this;
+  }
+  public UserEntity addRole(UserRoleEntity userRoleEntity){
+    this.roles.add (userRoleEntity);
     return this;
   }
 }

@@ -5,5 +5,5 @@ import com.example.musicsec.model.entity.UserRoleEntity;
 public interface UserRoleService {
     void initRoles ();
 
-    UserRoleEntity getRole (String user);
+    UserRoleEntity getRole (String role);
 }

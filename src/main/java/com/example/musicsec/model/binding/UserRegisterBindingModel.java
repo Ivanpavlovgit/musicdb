@@ -1,9 +1,23 @@
 package com.example.musicsec.model.binding;
 
+import com.example.musicsec.model.validators.FieldMatch;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+@FieldMatch(first = "password",
+        second = "confirmPassword")
 public class UserRegisterBindingModel {
+    @Size(min = 3, max = 42,message = "My error message")
+    @NotEmpty
     private String username;
+    @Email
     private String email;
+    @Size(min = 3, max = 42)
+    @NotEmpty
     private String fullname;
+    @Size(min = 2, max = 42)
     private String password;
     private String confirmPassword;
 
